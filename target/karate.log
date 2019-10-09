@@ -1,0 +1,54 @@
+17:57:15.385 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1329ms
+17:57:15.469 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+17:57:15.488 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@235f4c10{/__admin,null,AVAILABLE}
+17:57:15.491 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@77192705{/,null,AVAILABLE}
+17:57:15.537 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@675c310a{HTTP/1.1}{0.0.0.0:8080}
+17:57:15.542 [main] INFO  org.eclipse.jetty.server.Server - Started @1485ms
+17:57:15.941 [qtp50072771-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+17:57:16.186 [main] INFO  com.intuit.karate - karate.env system property was: null 
+17:57:16.262 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+
+17:57:16.265 [qtp50072771-21] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+17:57:16.280 [main] DEBUG com.intuit.karate - response time in milliseconds: 15.73
+1 < 200
+1 < Content-Type: application/json
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding, User-Agent
+[{ "cif":"B84946656", "name":"Paradigma Digital", "username":"paradigmadigital", "email":"info@paradigmadigital.com", "address":{    "street":"Atica 4, Via de las Dos Castillas",    "suite":"33",    "city":"Pozuelo de Alarcon, Madrid",    "zipcode":"28224" }, "website":"https://www.paradigmadigital.com"}, { "cif":"B82627019", "name":"Minsait by Indra", "username":"minsaitbyindra", "email":"info@minsait.com", "address":{    "street":"Av. de Bruselas",    "suite":"35",    "city":"Alcobendas, Madrid",    "zipcode":"28108" }, "website":"https://www.minsait.com"}]
+
+17:57:16.396 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@675c310a{HTTP/1.1}{0.0.0.0:8080}
+17:57:16.397 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@77192705{/,null,UNAVAILABLE}
+17:57:16.397 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@235f4c10{/__admin,null,UNAVAILABLE}
+15:23:27.907 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1222ms
+15:23:27.972 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+15:23:27.987 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@2a1edad4{/__admin,null,AVAILABLE}
+15:23:27.990 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@475835b1{/,null,AVAILABLE}
+15:23:28.040 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@34645867{HTTP/1.1}{0.0.0.0:8080}
+15:23:28.041 [main] INFO  org.eclipse.jetty.server.Server - Started @1357ms
+15:23:28.356 [qtp1340848245-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+15:23:28.591 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:23:28.656 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+
+15:23:28.659 [qtp1340848245-21] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+15:23:28.673 [main] DEBUG com.intuit.karate - response time in milliseconds: 14.90
+1 < 200
+1 < Content-Type: application/json
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding, User-Agent
+[{ "cif":"B84946656", "name":"Paradigma Digital", "username":"paradigmadigital", "email":"info@paradigmadigital.com", "address":{    "street":"Atica 4, Via de las Dos Castillas",    "suite":"33",    "city":"Pozuelo de Alarcon, Madrid",    "zipcode":"28224" }, "website":"https://www.paradigmadigital.com"}, { "cif":"B82627019", "name":"Minsait by Indra", "username":"minsaitbyindra", "email":"info@minsait.com", "address":{    "street":"Av. de Bruselas",    "suite":"35",    "city":"Alcobendas, Madrid",    "zipcode":"28108" }, "website":"https://www.minsait.com"}]
+
+15:23:28.787 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@34645867{HTTP/1.1}{0.0.0.0:8080}
+15:23:28.789 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@475835b1{/,null,UNAVAILABLE}
+15:23:28.789 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@2a1edad4{/__admin,null,UNAVAILABLE}
