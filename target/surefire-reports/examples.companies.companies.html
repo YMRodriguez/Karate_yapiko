@@ -169,50 +169,90 @@
         <div>
             <div class="scenario">
                 <div class="scenario-heading">
-                    <span class="scenario-keyword">Scenario: [1:24]</span><span class="scenario-name">get all companies</span>
+                    <span class="scenario-keyword">Scenario Outline: [2.1:46]</span><span class="scenario-name">check company name</span>
                 </div>
                 <div class="step-row">
                     <div class="step-cell passed">* url 'http://localhost:8080'</div>
-                    <div class="time-cell passed">0.003611</div>
+                    <div class="time-cell passed">0.003711</div>
                 </div>
-                <div class="preformatted">15:23:28.592 karate.env system property was: null</div>
+                <div class="preformatted">16:52:46.800 karate.env system property was: null</div>
                 <div class="step-row">
-                    <div class="step-cell passed">Given path 'companies'</div>
-                    <div class="time-cell passed">0.004142</div>
+                    <div class="step-cell passed">* def name = {name: 'Paradigma Digital'}</div>
+                    <div class="time-cell passed">0.000241</div>
+                </div>
+                <div class="step-row">
+                    <div class="step-cell passed">Given path 'companies', 'B84946656'</div>
+                    <div class="time-cell passed">0.004326</div>
                 </div>
                 <div class="step-row">
                     <div class="step-cell passed">When method get</div>
-                    <div class="time-cell passed">0.030942</div>
+                    <div class="time-cell passed">0.034448</div>
                 </div>
-                <div class="preformatted">15:23:28.656 request:
-1 &gt; GET http://localhost:8080/companies
+                <div class="preformatted">16:52:46.873 request:
+1 &gt; GET http://localhost:8080/companies/B84946656
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: localhost:8080
 1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/13)
 
-15:23:28.673 response time in milliseconds: 14.90
+16:52:46.890 response time in milliseconds: 14.68
 1 &lt; 200
 1 &lt; Content-Type: application/json
 1 &lt; Server: Jetty(9.2.22.v20170606)
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Vary: Accept-Encoding, User-Agent
-[{ "cif":"B84946656", "name":"Paradigma Digital", "username":"paradigmadigital", "email":"info@paradigmadigital.com", "address":{    "street":"Atica 4, Via de las Dos Castillas",    "suite":"33",    "city":"Pozuelo de Alarcon, Madrid",    "zipcode":"28224" }, "website":"https://www.paradigmadigital.com"}, { "cif":"B82627019", "name":"Minsait by Indra", "username":"minsaitbyindra", "email":"info@minsait.com", "address":{    "street":"Av. de Bruselas",    "suite":"35",    "city":"Alcobendas, Madrid",    "zipcode":"28108" }, "website":"https://www.minsait.com"}]</div>
+{ "cif":"B84946656", "name":"Paradigma Digital", "username":"paradigmadigital", "email":"info@paradigmadigital.com", "address":{    "street":"Atica 4, Via de las Dos Castillas",    "suite":"33",    "city":"Pozuelo de Alarcon, Madrid",    "zipcode":"28224" }, "website":"https://www.paradigmadigital.com"}</div>
                 <div class="step-row">
                     <div class="step-cell passed">Then status 200</div>
-                    <div class="time-cell passed">0.000025</div>
+                    <div class="time-cell passed">0.000031</div>
                 </div>
                 <div class="step-row">
-                    <div class="step-cell passed">And match $ == '#[2]'</div>
-                    <div class="time-cell passed">0.006537</div>
+                    <div class="step-cell passed">And match $ contains name</div>
+                    <div class="time-cell passed">0.000754</div>
+                </div>
+            </div>
+            <div class="scenario">
+                <div class="scenario-heading">
+                    <span class="scenario-keyword">Scenario Outline: [2.2:47]</span><span class="scenario-name">check company name</span>
                 </div>
                 <div class="step-row">
-                    <div class="step-cell passed">And match each $ contains {name: '#notnull'}</div>
-                    <div class="time-cell passed">0.000305</div>
+                    <div class="step-cell passed">* url 'http://localhost:8080'</div>
+                    <div class="time-cell passed">0.000144</div>
+                </div>
+                <div class="preformatted">16:52:46.905 karate.env system property was: null</div>
+                <div class="step-row">
+                    <div class="step-cell passed">* def name = {name: 'Minsait by Indra'}</div>
+                    <div class="time-cell passed">0.000125</div>
                 </div>
                 <div class="step-row">
-                    <div class="step-cell passed">And match each $ contains {email: '#notnull'}</div>
-                    <div class="time-cell passed">0.000139</div>
+                    <div class="step-cell passed">Given path 'companies', 'B82627019'</div>
+                    <div class="time-cell passed">0.003356</div>
+                </div>
+                <div class="step-row">
+                    <div class="step-cell passed">When method get</div>
+                    <div class="time-cell passed">0.007892</div>
+                </div>
+                <div class="preformatted">16:52:46.911 request:
+1 &gt; GET http://localhost:8080/companies/B82627019
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:8080
+1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+
+16:52:46.917 response time in milliseconds: 5.21
+1 &lt; 200
+1 &lt; Content-Type: application/json
+1 &lt; Server: Jetty(9.2.22.v20170606)
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding, User-Agent
+{ "cif":"B82627019", "name":"Minsait by Indra", "username":"minsaitbyindra", "email":"info@minsait.com", "address":{    "street":"Av. de Bruselas",    "suite":"35",    "city":"Alcobendas, Madrid",    "zipcode":"28108" }, "website":"https://www.minsait.com"}</div>
+                <div class="step-row">
+                    <div class="step-cell passed">Then status 200</div>
+                    <div class="time-cell passed">0.00001</div>
+                </div>
+                <div class="step-row">
+                    <div class="step-cell passed">And match $ contains name</div>
+                    <div class="time-cell passed">0.000153</div>
                 </div>
             </div>
         </div>

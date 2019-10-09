@@ -52,3 +52,74 @@
 15:23:28.787 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@34645867{HTTP/1.1}{0.0.0.0:8080}
 15:23:28.789 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@475835b1{/,null,UNAVAILABLE}
 15:23:28.789 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@2a1edad4{/__admin,null,UNAVAILABLE}
+16:27:08.991 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1191ms
+16:27:09.052 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+16:27:09.066 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@319988b0{/__admin,null,AVAILABLE}
+16:27:09.068 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@235f4c10{/,null,AVAILABLE}
+16:27:09.115 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@1d71006f{HTTP/1.1}{0.0.0.0:8080}
+16:27:09.120 [main] INFO  org.eclipse.jetty.server.Server - Started @1322ms
+16:27:09.434 [qtp544966217-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+16:27:09.741 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:27:09.818 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+
+16:27:09.822 [qtp544966217-23] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+16:27:09.837 [main] DEBUG com.intuit.karate - response time in milliseconds: 15.79
+1 < 200
+1 < Content-Type: application/json
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding, User-Agent
+[{ "cif":"B84946656", "name":"Paradigma Digital", "username":"paradigmadigital", "email":"info@paradigmadigital.com", "address":{    "street":"Atica 4, Via de las Dos Castillas",    "suite":"33",    "city":"Pozuelo de Alarcon, Madrid",    "zipcode":"28224" }, "website":"https://www.paradigmadigital.com"}, { "cif":"B82627019", "name":"Minsait by Indra", "username":"minsaitbyindra", "email":"info@minsait.com", "address":{    "street":"Av. de Bruselas",    "suite":"35",    "city":"Alcobendas, Madrid",    "zipcode":"28108" }, "website":"https://www.minsait.com"}]
+
+16:27:09.977 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@1d71006f{HTTP/1.1}{0.0.0.0:8080}
+16:27:09.978 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@235f4c10{/,null,UNAVAILABLE}
+16:27:09.979 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@319988b0{/__admin,null,UNAVAILABLE}
+16:52:45.203 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags ~@test1
+16:52:46.043 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1289ms
+16:52:46.107 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+16:52:46.122 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@47289387{/__admin,null,AVAILABLE}
+16:52:46.124 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@72b16078{/,null,AVAILABLE}
+16:52:46.170 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@4f2a0099{HTTP/1.1}{0.0.0.0:8080}
+16:52:46.172 [main] INFO  org.eclipse.jetty.server.Server - Started @1419ms
+16:52:46.506 [qtp1768127248-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+16:52:46.799 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:52:46.873 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8080/companies/B84946656
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+
+16:52:46.876 [qtp1768127248-23] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+16:52:46.890 [main] DEBUG com.intuit.karate - response time in milliseconds: 14.68
+1 < 200
+1 < Content-Type: application/json
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding, User-Agent
+{ "cif":"B84946656", "name":"Paradigma Digital", "username":"paradigmadigital", "email":"info@paradigmadigital.com", "address":{    "street":"Atica 4, Via de las Dos Castillas",    "suite":"33",    "city":"Pozuelo de Alarcon, Madrid",    "zipcode":"28224" }, "website":"https://www.paradigmadigital.com"}
+
+16:52:46.905 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:52:46.911 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8080/companies/B82627019
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+
+16:52:46.917 [main] DEBUG com.intuit.karate - response time in milliseconds: 5.21
+1 < 200
+1 < Content-Type: application/json
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding, User-Agent
+{ "cif":"B82627019", "name":"Minsait by Indra", "username":"minsaitbyindra", "email":"info@minsait.com", "address":{    "street":"Av. de Bruselas",    "suite":"35",    "city":"Alcobendas, Madrid",    "zipcode":"28108" }, "website":"https://www.minsait.com"}
+
+16:52:47.037 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@4f2a0099{HTTP/1.1}{0.0.0.0:8080}
+16:52:47.038 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@72b16078{/,null,UNAVAILABLE}
+16:52:47.039 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@47289387{/__admin,null,UNAVAILABLE}

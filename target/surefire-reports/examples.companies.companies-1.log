@@ -1,12 +1,12 @@
-15:23:28.592 karate.env system property was: null 
-15:23:28.656 request:
+16:27:09.742 karate.env system property was: null 
+16:27:09.819 request:
 1 > GET http://localhost:8080/companies
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: localhost:8080
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
 
-15:23:28.673 response time in milliseconds: 14.90
+16:27:09.838 response time in milliseconds: 15.79
 1 < 200
 1 < Content-Type: application/json
 1 < Server: Jetty(9.2.22.v20170606)

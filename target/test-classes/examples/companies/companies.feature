@@ -16,12 +16,12 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@test1
+
 Feature: testing company mock web services
 
  Background:
   * url 'http://localhost:8080'
-
+@test1
  Scenario: get all companies
 
   Given path 'companies'
@@ -32,3 +32,16 @@ Feature: testing company mock web services
   And match each $ contains {name: '#notnull'}
   And match each $ contains {email: '#notnull'}
   #checks if each element has this fields and are not null
+@test2
+	Scenario Outline: check company name
+* def name = {name: '<name>'}
+ Given path 'companies', '<cif>'
+ When method get
+ Then status 200
+ And match $ contains name
+ # name varible is defined above to avoid writing the json in the match line 
+
+ Examples:
+   | cif       | name              |
+   | B84946656 | Paradigma Digital |
+   | B82627019 | Minsait by Indra  |
