@@ -28,6 +28,8 @@ public class CompaniesRunner {
         configureFor("localhost", 8080);
 
         stubForGetAllCompanies();
+        stubForGetCompanyByCIF("B84946656", getParadigmaDigitalCompany());
+        stubForGetCompanyByCIF("B82627019", getMinsaitCompany());
     }
 
     private static void stubForGetAllCompanies() {
@@ -40,6 +42,14 @@ public class CompaniesRunner {
 
     private static String getAllCompanies() {
         return "[" + getParadigmaDigitalCompany() + ", " + getMinsaitCompany() + "]";
+    }
+
+    private static void stubForGetCompanyByCIF(String cif, String companyByCIFResponse) {
+        stubFor(get(urlEqualTo(URL + "/" + cif))
+                .willReturn(aResponse()
+                        .withStatus(200)
+                        .withHeader("Content-Type", "application/json")
+                        .withBody(companyByCIFResponse)));
     }
 
     // this two methods will serve as different responses from the stub server

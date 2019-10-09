@@ -16,6 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
+@test1
 Feature: testing company mock web services
 
  Background:
