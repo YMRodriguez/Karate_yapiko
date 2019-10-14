@@ -28,10 +28,12 @@ public class CompaniesRunner {
         configureFor("localhost", 8080);
 
         stubForGetAllCompanies();
+        //stub for the test2 request
         stubForGetCompanyByCIF("B84946656", getParadigmaDigitalCompany());
         stubForGetCompanyByCIF("B82627019", getMinsaitCompany());
     }
 
+    //stub method to get companies
     private static void stubForGetAllCompanies() {
         stubFor(get(urlEqualTo(URL))
                 .willReturn(aResponse()
@@ -40,10 +42,12 @@ public class CompaniesRunner {
                         .withBody(getAllCompanies())));
     }
 
+    //creates the body of the get request
     private static String getAllCompanies() {
         return "[" + getParadigmaDigitalCompany() + ", " + getMinsaitCompany() + "]";
     }
 
+    //used in the test2
     private static void stubForGetCompanyByCIF(String cif, String companyByCIFResponse) {
         stubFor(get(urlEqualTo(URL + "/" + cif))
                 .willReturn(aResponse()

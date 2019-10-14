@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="examples.companies.CompaniesRunner" time="2.073" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="examples.companies.CompaniesRunner" time="2.019" tests="2" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="karate.options" value="--tags ~@test1"/>
+    <property name="karate.options" value="--tags @test2"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="13+33"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/openjdk-13.jdk/Contents/Home/lib"/>
@@ -42,7 +42,7 @@
     <property name="java.class.path" value="/usr/local/Cellar/maven/3.6.2/libexec/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="13"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dkarate.options=--tags ~@test1 -Dtest=CompaniesRunner"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dkarate.options=--tags @test2 -Dtest=CompaniesRunner"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/openjdk-13.jdk/Contents/Home"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -58,6 +58,6 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="[2.1:46] check company name" classname="[companies]" time="0.057"/>
-  <testcase name="[2.2:47] check company name" classname="[companies]" time="0.014"/>
+  <testcase name="[2.1:46] check company name" classname="[companies]" time="0.06"/>
+  <testcase name="[2.2:47] check company name" classname="[companies]" time="0.012"/>
 </testsuite>

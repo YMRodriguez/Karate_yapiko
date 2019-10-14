@@ -35,12 +35,15 @@ Feature: testing company mock web services
 @test2
 	Scenario Outline: check company name
 * def name = {name: '<name>'}
- Given path 'companies', '<cif>'
+ Given path 'companies', '<cif>' 
+ #the steps can use <> that reference headers in the examples table
  When method get
  Then status 200
  And match $ contains name
  # name varible is defined above to avoid writing the json in the match line 
-
+ 
+ # an example is also a test, they are an executable specification of the system and the scenario outline 
+ # is runned once for each row in the examples sections beneath it 
  Examples:
    | cif       | name              |
    | B84946656 | Paradigma Digital |

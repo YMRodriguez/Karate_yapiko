@@ -1,16 +1,17 @@
-16:52:46.905 karate.env system property was: null 
-16:52:46.911 request:
+09:58:04.360 karate.env system property was: null 
+09:58:04.366 request:
 1 > GET http://localhost:8080/companies/B82627019
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: localhost:8080
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
 
-16:52:46.917 response time in milliseconds: 5.21
+09:58:04.372 response time in milliseconds: 4.56
 1 < 200
 1 < Content-Type: application/json
 1 < Server: Jetty(9.2.22.v20170606)
 1 < Transfer-Encoding: chunked
 1 < Vary: Accept-Encoding, User-Agent
 { "cif":"B82627019", "name":"Minsait by Indra", "username":"minsaitbyindra", "email":"info@minsait.com", "address":{    "street":"Av. de Bruselas",    "suite":"35",    "city":"Alcobendas, Madrid",    "zipcode":"28108" }, "website":"https://www.minsait.com"}
+
 
