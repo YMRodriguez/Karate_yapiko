@@ -21,7 +21,7 @@ Feature: testing company mock web services
 
  Background:
   * url 'http://localhost:8080'
-@test1
+@testGET1
  Scenario: get all companies
 
   Given path 'companies'
@@ -32,7 +32,7 @@ Feature: testing company mock web services
   And match each $ contains {name: '#notnull'}
   And match each $ contains {email: '#notnull'}
   #checks if each element has this fields and are not null
-@test2
+@testGET2
 	Scenario Outline: check company name
 * def name = {name: '<name>'}
  Given path 'companies', '<cif>' 
@@ -48,3 +48,28 @@ Feature: testing company mock web services
    | cif       | name              |
    | B84946656 | Paradigma Digital |
    | B82627019 | Minsait by Indra  |
+   
+   
+@testPOST
+ Scenario Outline: create new companies
+
+ Given path 'companies'
+ * def comp =
+ """
+ {
+   "cif": '<cif>',
+   "name": '<name>',
+   "email": '<email>'
+ }
+ """
+ When request comp
+ #there was an error while using the word company
+ And method POST
+ Then status 201
+ And match $ contains comp
+ And match $ contains {cif: '#notnull'}
+
+ Examples:
+   | cif       | name    | email              |
+   | B18996504 | Stratio | info@stratio.com   |
+ 

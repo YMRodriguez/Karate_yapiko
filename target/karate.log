@@ -343,3 +343,1964 @@
 09:58:04.491 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@2c4ca0f9{HTTP/1.1}{0.0.0.0:8080}
 09:58:04.492 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@47289387{/,null,UNAVAILABLE}
 09:58:04.492 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@4c36250e{/__admin,null,UNAVAILABLE}
+10:41:05.147 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+10:41:05.958 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1251ms
+10:41:06.015 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+10:41:06.031 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@517bd097{/__admin,null,AVAILABLE}
+10:41:06.033 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@46074492{/,null,AVAILABLE}
+10:41:06.079 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@581b7f48{HTTP/1.1}{0.0.0.0:8080}
+10:41:06.085 [main] INFO  org.eclipse.jetty.server.Server - Started @1377ms
+10:41:06.407 [qtp1868578441-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+10:41:06.756 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:41:06.826 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+10:41:06.831 [qtp1868578441-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+10:41:06.845 [qtp1868578441-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+10:41:06.855 [main] DEBUG com.intuit.karate - response time in milliseconds: 26.04
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+10:41:06.856 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 26, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+10:41:06.979 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@581b7f48{HTTP/1.1}{0.0.0.0:8080}
+10:41:06.980 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@46074492{/,null,UNAVAILABLE}
+10:41:06.981 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@517bd097{/__admin,null,UNAVAILABLE}
+11:26:20.866 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testGET1
+11:26:21.681 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1257ms
+11:26:21.741 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+11:26:21.756 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@517bd097{/__admin,null,AVAILABLE}
+11:26:21.758 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@46074492{/,null,AVAILABLE}
+11:26:21.801 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@7509a242{HTTP/1.1}{0.0.0.0:8080}
+11:26:21.803 [main] INFO  org.eclipse.jetty.server.Server - Started @1379ms
+11:26:22.103 [qtp1868578441-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+11:26:22.408 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:26:22.479 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+
+11:26:22.482 [qtp1868578441-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+11:26:22.495 [main] DEBUG com.intuit.karate - response time in milliseconds: 12.98
+1 < 200
+1 < Content-Type: application/json
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+1 < Vary: Accept-Encoding, User-Agent
+[{ "cif":"B84946656", "name":"Paradigma Digital", "username":"paradigmadigital", "email":"info@paradigmadigital.com", "address":{    "street":"Atica 4, Via de las Dos Castillas",    "suite":"33",    "city":"Pozuelo de Alarcon, Madrid",    "zipcode":"28224" }, "website":"https://www.paradigmadigital.com"}, { "cif":"B82627019", "name":"Minsait by Indra", "username":"minsaitbyindra", "email":"info@minsait.com", "address":{    "street":"Av. de Bruselas",    "suite":"35",    "city":"Alcobendas, Madrid",    "zipcode":"28108" }, "website":"https://www.minsait.com"}]
+
+11:26:22.634 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@7509a242{HTTP/1.1}{0.0.0.0:8080}
+11:26:22.635 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@46074492{/,null,UNAVAILABLE}
+11:26:22.636 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@517bd097{/__admin,null,UNAVAILABLE}
+11:26:22.637 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1868578441{STOPPING,8<=8<=10,i=0,q=3} Couldn't stop Thread[qtp1868578441-17,5,]
+11:26:22.638 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1868578441{STOPPING,8<=8<=10,i=0,q=3} Couldn't stop Thread[qtp1868578441-20,5,]
+11:26:39.065 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+11:26:39.855 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1232ms
+11:26:39.911 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+11:26:39.927 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@12cd9150{/__admin,null,AVAILABLE}
+11:26:39.929 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@22c86919{/,null,AVAILABLE}
+11:26:39.972 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@5398edd0{HTTP/1.1}{0.0.0.0:8080}
+11:26:39.977 [main] INFO  org.eclipse.jetty.server.Server - Started @1351ms
+11:26:40.263 [qtp1821100643-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+11:26:40.588 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:26:40.649 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+11:26:40.653 [qtp1821100643-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+11:26:40.664 [qtp1821100643-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+11:26:40.674 [main] DEBUG com.intuit.karate - response time in milliseconds: 22.39
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+11:26:40.675 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 22, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+11:26:40.790 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@5398edd0{HTTP/1.1}{0.0.0.0:8080}
+11:26:40.791 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@22c86919{/,null,UNAVAILABLE}
+11:26:40.792 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@12cd9150{/__admin,null,UNAVAILABLE}
+11:28:50.120 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+11:28:50.943 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1272ms
+11:28:51.002 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+11:28:51.016 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@50687efb{/__admin,null,AVAILABLE}
+11:28:51.018 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@64da2a7{/,null,AVAILABLE}
+11:28:51.064 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@551a20d6{HTTP/1.1}{0.0.0.0:8080}
+11:28:51.069 [main] INFO  org.eclipse.jetty.server.Server - Started @1396ms
+11:28:51.367 [qtp2100572327-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+11:28:51.617 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:28:51.703 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+11:28:51.711 [qtp2100572327-21] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+11:28:51.721 [qtp2100572327-21] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+11:28:51.730 [main] DEBUG com.intuit.karate - response time in milliseconds: 20.45
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+11:28:51.731 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 20, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+11:28:51.850 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@551a20d6{HTTP/1.1}{0.0.0.0:8080}
+11:28:51.851 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@64da2a7{/,null,UNAVAILABLE}
+11:28:51.851 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@50687efb{/__admin,null,UNAVAILABLE}
+11:46:14.143 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+11:46:14.968 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1287ms
+11:46:15.028 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+11:46:15.041 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,AVAILABLE}
+11:46:15.043 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3b9d6699{/,null,AVAILABLE}
+11:46:15.091 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@4cc547a{HTTP/1.1}{0.0.0.0:8080}
+11:46:15.094 [main] INFO  org.eclipse.jetty.server.Server - Started @1414ms
+11:46:15.397 [qtp119112899-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+11:46:15.716 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:46:15.784 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+11:46:15.787 [qtp119112899-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+11:46:15.798 [qtp119112899-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+11:46:15.806 [main] DEBUG com.intuit.karate - response time in milliseconds: 19.92
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+11:46:15.807 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 20, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+11:46:15.934 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@4cc547a{HTTP/1.1}{0.0.0.0:8080}
+11:46:15.935 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3b9d6699{/,null,UNAVAILABLE}
+11:46:15.936 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,UNAVAILABLE}
+11:47:31.230 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+11:47:32.052 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1260ms
+11:47:32.118 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+11:47:32.135 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@cdc3aae{/__admin,null,AVAILABLE}
+11:47:32.137 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@56e07a08{/,null,AVAILABLE}
+11:47:32.184 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@9f46d94{HTTP/1.1}{0.0.0.0:8080}
+11:47:32.185 [main] INFO  org.eclipse.jetty.server.Server - Started @1394ms
+11:47:32.505 [qtp1831141281-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+11:47:32.835 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:47:32.901 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+11:47:32.905 [qtp1831141281-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+11:47:32.915 [qtp1831141281-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+11:47:32.930 [main] DEBUG com.intuit.karate - response time in milliseconds: 26.83
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+11:47:32.931 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 27, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+11:47:33.051 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@9f46d94{HTTP/1.1}{0.0.0.0:8080}
+11:47:33.052 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@56e07a08{/,null,UNAVAILABLE}
+11:47:33.053 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@cdc3aae{/__admin,null,UNAVAILABLE}
+11:55:52.103 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+11:55:52.902 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1239ms
+11:55:52.957 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+11:55:52.973 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@cdc3aae{/__admin,null,AVAILABLE}
+11:55:52.976 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@56e07a08{/,null,AVAILABLE}
+11:55:53.023 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@9f46d94{HTTP/1.1}{0.0.0.0:8080}
+11:55:53.024 [main] INFO  org.eclipse.jetty.server.Server - Started @1361ms
+11:55:53.317 [qtp1831141281-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+11:55:53.645 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:55:53.713 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+11:55:53.716 [qtp1831141281-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+11:55:53.729 [qtp1831141281-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+11:55:53.739 [main] DEBUG com.intuit.karate - response time in milliseconds: 23.63
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+11:55:53.740 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 24, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+11:55:53.871 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@9f46d94{HTTP/1.1}{0.0.0.0:8080}
+11:55:53.873 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@56e07a08{/,null,UNAVAILABLE}
+11:55:53.873 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@cdc3aae{/__admin,null,UNAVAILABLE}
+11:57:16.427 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+11:57:17.237 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1256ms
+11:57:17.294 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+11:57:17.310 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,AVAILABLE}
+11:57:17.312 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3b9d6699{/,null,AVAILABLE}
+11:57:17.359 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@1e7a5dc8{HTTP/1.1}{0.0.0.0:8080}
+11:57:17.362 [main] INFO  org.eclipse.jetty.server.Server - Started @1381ms
+11:57:17.660 [qtp119112899-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+11:57:17.983 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:57:18.050 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+11:57:18.053 [qtp119112899-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+11:57:18.063 [qtp119112899-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+11:57:18.072 [main] DEBUG com.intuit.karate - response time in milliseconds: 20.58
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+11:57:18.073 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 21, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+11:57:18.207 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@1e7a5dc8{HTTP/1.1}{0.0.0.0:8080}
+11:57:18.209 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3b9d6699{/,null,UNAVAILABLE}
+11:57:18.210 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,UNAVAILABLE}
+11:57:49.743 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+11:57:50.542 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1240ms
+11:57:50.615 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+11:57:50.628 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@21526f6c{/__admin,null,AVAILABLE}
+11:57:50.631 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@12cd9150{/,null,AVAILABLE}
+11:57:50.677 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@67ef029{HTTP/1.1}{0.0.0.0:8080}
+11:57:50.681 [main] INFO  org.eclipse.jetty.server.Server - Started @1376ms
+11:57:50.982 [qtp1114335860-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+11:57:51.310 [main] INFO  com.intuit.karate - karate.env system property was: null 
+11:57:51.384 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+11:57:51.387 [qtp1114335860-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+11:57:51.398 [qtp1114335860-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+11:57:51.407 [main] DEBUG com.intuit.karate - response time in milliseconds: 20.66
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+11:57:51.407 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 21, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+11:57:51.531 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@67ef029{HTTP/1.1}{0.0.0.0:8080}
+11:57:51.532 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@12cd9150{/,null,UNAVAILABLE}
+11:57:51.533 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@21526f6c{/__admin,null,UNAVAILABLE}
+12:02:08.519 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+12:02:09.350 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1302ms
+12:02:09.409 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+12:02:09.425 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@12cd9150{/__admin,null,AVAILABLE}
+12:02:09.427 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@22c86919{/,null,AVAILABLE}
+12:02:09.471 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@1908b21b{HTTP/1.1}{0.0.0.0:8080}
+12:02:09.477 [main] INFO  org.eclipse.jetty.server.Server - Started @1429ms
+12:02:09.795 [qtp1821100643-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+12:02:10.117 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:02:10.184 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+12:02:10.187 [qtp1821100643-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+12:02:10.198 [qtp1821100643-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json;charset=UTF-8               | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:02:10.207 [main] DEBUG com.intuit.karate - response time in milliseconds: 20.99
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json;charset=UTF-8               | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+12:02:10.208 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 21, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json;charset=UTF-8               | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:02:10.333 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@1908b21b{HTTP/1.1}{0.0.0.0:8080}
+12:02:10.335 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@22c86919{/,null,UNAVAILABLE}
+12:02:10.335 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@12cd9150{/__admin,null,UNAVAILABLE}
+12:24:43.317 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+12:24:44.143 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1261ms
+12:24:44.200 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+12:24:44.213 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@21526f6c{/__admin,null,AVAILABLE}
+12:24:44.216 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@12cd9150{/,null,AVAILABLE}
+12:24:44.261 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@721aabc5{HTTP/1.1}{0.0.0.0:8080}
+12:24:44.262 [main] INFO  org.eclipse.jetty.server.Server - Started @1380ms
+12:24:44.556 [qtp1114335860-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+12:24:44.889 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:24:44.960 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+12:24:44.963 [qtp1114335860-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+12:24:44.974 [qtp1114335860-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:24:44.983 [main] DEBUG com.intuit.karate - response time in milliseconds: 20.82
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+12:24:44.984 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 21, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:24:45.098 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@721aabc5{HTTP/1.1}{0.0.0.0:8080}
+12:24:45.099 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@12cd9150{/,null,UNAVAILABLE}
+12:24:45.100 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@21526f6c{/__admin,null,UNAVAILABLE}
+12:24:45.101 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1114335860{STOPPING,8<=8<=10,i=3,q=4} Couldn't stop Thread[qtp1114335860-17,5,]
+12:24:45.102 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1114335860{STOPPING,8<=8<=10,i=0,q=4} Couldn't stop Thread[qtp1114335860-20,5,]
+12:36:17.901 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+12:36:18.671 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1203ms
+12:36:18.741 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+12:36:18.752 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@cdc3aae{/__admin,null,AVAILABLE}
+12:36:18.754 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@56e07a08{/,null,AVAILABLE}
+12:36:18.796 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@9f46d94{HTTP/1.1}{0.0.0.0:8080}
+12:36:18.798 [main] INFO  org.eclipse.jetty.server.Server - Started @1330ms
+12:36:19.090 [qtp1831141281-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+12:36:19.412 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:36:19.484 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies/create
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+12:36:19.487 [qtp1831141281-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+12:36:19.498 [qtp1831141281-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies/create                                          | /companies/create
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:36:19.506 [main] DEBUG com.intuit.karate - response time in milliseconds: 20.19
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies/create                                          | /companies/create
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+12:36:19.508 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 20, url: http://localhost:8080/companies/create, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies/create                                          | /companies/create
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:36:19.622 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@9f46d94{HTTP/1.1}{0.0.0.0:8080}
+12:36:19.623 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@56e07a08{/,null,UNAVAILABLE}
+12:36:19.624 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@cdc3aae{/__admin,null,UNAVAILABLE}
+12:36:19.625 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1831141281{STOPPING,8<=8<=10,i=3,q=5} Couldn't stop Thread[qtp1831141281-17,5,]
+12:36:19.625 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1831141281{STOPPING,8<=8<=10,i=0,q=5} Couldn't stop Thread[qtp1831141281-23,5,]
+12:37:44.453 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+12:37:45.215 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1175ms
+12:37:45.270 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+12:37:45.282 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@21526f6c{/__admin,null,AVAILABLE}
+12:37:45.284 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@12cd9150{/,null,AVAILABLE}
+12:37:45.325 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@67ef029{HTTP/1.1}{0.0.0.0:8080}
+12:37:45.330 [main] INFO  org.eclipse.jetty.server.Server - Started @1289ms
+12:37:45.633 [qtp1114335860-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+12:37:45.950 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:37:46.017 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies/create
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+12:37:46.020 [qtp1114335860-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+12:37:46.030 [qtp1114335860-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies/create                                          | /companies/create
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:37:46.039 [main] DEBUG com.intuit.karate - response time in milliseconds: 19.79
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies/create                                          | /companies/create
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+12:37:46.040 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 20, url: http://localhost:8080/companies/create, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies/create                                          | /companies/create
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:37:46.150 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@67ef029{HTTP/1.1}{0.0.0.0:8080}
+12:37:46.151 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@12cd9150{/,null,UNAVAILABLE}
+12:37:46.152 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@21526f6c{/__admin,null,UNAVAILABLE}
+12:39:24.334 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+12:39:25.091 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1194ms
+12:39:25.156 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+12:39:25.168 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@21526f6c{/__admin,null,AVAILABLE}
+12:39:25.170 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@12cd9150{/,null,AVAILABLE}
+12:39:25.213 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@67ef029{HTTP/1.1}{0.0.0.0:8080}
+12:39:25.218 [main] INFO  org.eclipse.jetty.server.Server - Started @1320ms
+12:39:25.506 [qtp1114335860-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+12:39:25.830 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:39:25.897 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies/create
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+12:39:25.900 [qtp1114335860-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+12:39:25.911 [qtp1114335860-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies/create                                          | /companies/create
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:39:25.919 [main] DEBUG com.intuit.karate - response time in milliseconds: 20.08
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies/create                                          | /companies/create
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+12:39:25.920 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 20, url: http://localhost:8080/companies/create, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies/create                                          | /companies/create
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:39:26.032 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@67ef029{HTTP/1.1}{0.0.0.0:8080}
+12:39:26.033 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@12cd9150{/,null,UNAVAILABLE}
+12:39:26.034 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@21526f6c{/__admin,null,UNAVAILABLE}
+12:39:26.035 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1114335860{STOPPING,8<=8<=10,i=1,q=3} Couldn't stop Thread[qtp1114335860-20,5,]
+12:39:26.036 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1114335860{STOPPING,8<=8<=10,i=0,q=3} Couldn't stop Thread[qtp1114335860-23,5,]
+12:40:57.006 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+12:40:57.761 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1177ms
+12:40:57.817 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+12:40:57.830 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@1601e47{/__admin,null,AVAILABLE}
+12:40:57.832 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@37eeec90{/,null,AVAILABLE}
+12:40:57.873 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@740abb5{HTTP/1.1}{0.0.0.0:8080}
+12:40:57.879 [main] INFO  org.eclipse.jetty.server.Server - Started @1292ms
+12:40:58.175 [qtp2000469839-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+12:40:58.487 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:40:58.562 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+12:40:58.565 [qtp2000469839-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+12:40:58.575 [qtp2000469839-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:40:58.584 [main] DEBUG com.intuit.karate - response time in milliseconds: 19.78
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+12:40:58.585 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 20, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:40:58.699 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@740abb5{HTTP/1.1}{0.0.0.0:8080}
+12:40:58.701 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@37eeec90{/,null,UNAVAILABLE}
+12:40:58.701 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@1601e47{/__admin,null,UNAVAILABLE}
+12:42:57.667 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+12:42:58.434 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1192ms
+12:42:58.503 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+12:42:58.517 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@cdc3aae{/__admin,null,AVAILABLE}
+12:42:58.519 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@56e07a08{/,null,AVAILABLE}
+12:42:58.562 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@9f46d94{HTTP/1.1}{0.0.0.0:8080}
+12:42:58.566 [main] INFO  org.eclipse.jetty.server.Server - Started @1321ms
+12:42:58.856 [qtp1959451969-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+12:42:59.181 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:42:59.251 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+12:42:59.254 [qtp1959451969-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+12:42:59.263 [qtp1959451969-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:42:59.272 [main] DEBUG com.intuit.karate - response time in milliseconds: 18.02
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+12:42:59.273 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 18, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:42:59.390 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@9f46d94{HTTP/1.1}{0.0.0.0:8080}
+12:42:59.391 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@56e07a08{/,null,UNAVAILABLE}
+12:42:59.392 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@cdc3aae{/__admin,null,UNAVAILABLE}
+12:42:59.393 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1959451969{STOPPING,8<=8<=10,i=3,q=5} Couldn't stop Thread[qtp1959451969-21,5,]
+12:42:59.394 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1959451969{STOPPING,8<=8<=10,i=0,q=5} Couldn't stop Thread[qtp1959451969-17,5,]
+12:55:03.667 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+12:55:04.443 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1212ms
+12:55:04.505 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+12:55:04.517 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@a486d78{/__admin,null,AVAILABLE}
+12:55:04.520 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@5990e6c5{/,null,AVAILABLE}
+12:55:04.566 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@53ac6548{HTTP/1.1}{0.0.0.0:8080}
+12:55:04.570 [main] INFO  org.eclipse.jetty.server.Server - Started @1335ms
+12:55:04.877 [qtp1327895505-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+12:55:05.199 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:55:05.265 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+12:55:05.269 [qtp1327895505-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+12:55:05.280 [qtp1327895505-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:55:05.288 [main] DEBUG com.intuit.karate - response time in milliseconds: 20.69
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+12:55:05.289 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 21, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:55:05.407 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@53ac6548{HTTP/1.1}{0.0.0.0:8080}
+12:55:05.408 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@5990e6c5{/,null,UNAVAILABLE}
+12:55:05.409 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@a486d78{/__admin,null,UNAVAILABLE}
+12:59:47.784 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+12:59:48.586 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1240ms
+12:59:48.641 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+12:59:48.653 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@66ea1466{/__admin,null,AVAILABLE}
+12:59:48.655 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@724f138e{/,null,AVAILABLE}
+12:59:48.699 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@56db847e{HTTP/1.1}{0.0.0.0:8080}
+12:59:48.704 [main] INFO  org.eclipse.jetty.server.Server - Started @1354ms
+12:59:48.998 [qtp1527254842-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+12:59:49.330 [main] INFO  com.intuit.karate - karate.env system property was: null 
+12:59:49.398 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+12:59:49.401 [qtp1527254842-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+12:59:49.412 [qtp1527254842-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:59:49.421 [main] DEBUG com.intuit.karate - response time in milliseconds: 21.49
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+12:59:49.422 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 21, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+12:59:49.537 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@56db847e{HTTP/1.1}{0.0.0.0:8080}
+12:59:49.538 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@724f138e{/,null,UNAVAILABLE}
+12:59:49.539 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@66ea1466{/__admin,null,UNAVAILABLE}
+13:00:45.970 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+13:00:46.758 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1213ms
+13:00:46.817 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+13:00:46.829 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,AVAILABLE}
+13:00:46.831 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3b9d6699{/,null,AVAILABLE}
+13:00:46.875 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@51c280bb{HTTP/1.1}{0.0.0.0:8080}
+13:00:46.880 [main] INFO  org.eclipse.jetty.server.Server - Started @1332ms
+13:00:47.193 [qtp119112899-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+13:00:47.523 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:00:47.602 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:00:47.605 [qtp119112899-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+13:00:47.613 [main] DEBUG com.intuit.karate - response time in milliseconds: 8.96
+1 < 201
+1 < Content-Type: application/json
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+{   "cif": "B18996504",   "name": "Stratio",   "email": "info@stratio.com"}
+
+13:00:47.727 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@51c280bb{HTTP/1.1}{0.0.0.0:8080}
+13:00:47.728 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3b9d6699{/,null,UNAVAILABLE}
+13:00:47.729 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,UNAVAILABLE}
+13:00:47.730 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp119112899{STOPPING,8<=8<=10,i=2,q=5} Couldn't stop Thread[qtp119112899-20,5,]
+13:00:47.731 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp119112899{STOPPING,8<=8<=10,i=0,q=3} Couldn't stop Thread[qtp119112899-16,5,]
+13:00:47.731 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp119112899{STOPPING,8<=8<=10,i=0,q=3} Couldn't stop Thread[qtp119112899-21,5,]
+13:03:20.045 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+13:03:20.836 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1232ms
+13:03:20.895 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+13:03:20.908 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,AVAILABLE}
+13:03:20.911 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3b9d6699{/,null,AVAILABLE}
+13:03:20.954 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@4cc547a{HTTP/1.1}{0.0.0.0:8080}
+13:03:20.959 [main] INFO  org.eclipse.jetty.server.Server - Started @1351ms
+13:03:21.269 [qtp119112899-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+13:03:21.609 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:03:21.675 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:03:21.678 [qtp119112899-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+13:03:21.687 [main] DEBUG com.intuit.karate - response time in milliseconds: 9.24
+1 < 201
+1 < Content-Type: application/json
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+{"cif": "B18996504","name": "Stratio","email": "info@stratio.com"}
+
+13:03:21.796 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@4cc547a{HTTP/1.1}{0.0.0.0:8080}
+13:03:21.797 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3b9d6699{/,null,UNAVAILABLE}
+13:03:21.798 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,UNAVAILABLE}
+13:04:26.131 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+13:04:26.924 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1228ms
+13:04:26.988 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+13:04:27.000 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@66ea1466{/__admin,null,AVAILABLE}
+13:04:27.003 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@724f138e{/,null,AVAILABLE}
+13:04:27.048 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@41a420fd{HTTP/1.1}{0.0.0.0:8080}
+13:04:27.051 [main] INFO  org.eclipse.jetty.server.Server - Started @1355ms
+13:04:27.338 [qtp1527254842-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+13:04:27.675 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:04:27.745 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:04:27.748 [qtp1527254842-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+13:04:27.757 [main] DEBUG com.intuit.karate - response time in milliseconds: 9.65
+1 < 201
+1 < Content-Type: application/json
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+{"cif": "B18996504","name": "Stratio","email": "info@stratio.com"}
+
+13:04:27.869 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@41a420fd{HTTP/1.1}{0.0.0.0:8080}
+13:04:27.871 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@724f138e{/,null,UNAVAILABLE}
+13:04:27.871 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@66ea1466{/__admin,null,UNAVAILABLE}
+13:04:27.872 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1527254842{STOPPING,8<=8<=10,i=1,q=3} Couldn't stop Thread[qtp1527254842-23,5,]
+13:04:27.873 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1527254842{STOPPING,8<=8<=10,i=0,q=3} Couldn't stop Thread[qtp1527254842-20,5,]
+13:05:21.320 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+13:05:22.111 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1233ms
+13:05:22.168 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+13:05:22.182 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,AVAILABLE}
+13:05:22.184 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3b9d6699{/,null,AVAILABLE}
+13:05:22.228 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@77537bca{HTTP/1.1}{0.0.0.0:8080}
+13:05:22.230 [main] INFO  org.eclipse.jetty.server.Server - Started @1353ms
+13:05:22.549 [qtp119112899-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+13:05:22.871 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:05:22.933 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:05:22.936 [qtp119112899-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+13:05:22.944 [main] DEBUG com.intuit.karate - response time in milliseconds: 9.33
+1 < 201
+1 < Content-Type: application/json
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:05:23.054 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@77537bca{HTTP/1.1}{0.0.0.0:8080}
+13:05:23.055 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3b9d6699{/,null,UNAVAILABLE}
+13:05:23.056 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,UNAVAILABLE}
+13:05:23.057 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp119112899{STOPPING,8<=8<=10,i=3,q=5} Couldn't stop Thread[qtp119112899-20,5,]
+13:05:23.058 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp119112899{STOPPING,8<=8<=10,i=0,q=4} Couldn't stop Thread[qtp119112899-23,5,]
+13:07:43.464 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+13:07:44.265 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1232ms
+13:07:44.321 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+13:07:44.333 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@4c36250e{/__admin,null,AVAILABLE}
+13:07:44.335 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@47289387{/,null,AVAILABLE}
+13:07:44.381 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@394c7f25{HTTP/1.1}{0.0.0.0:8080}
+13:07:44.385 [main] INFO  org.eclipse.jetty.server.Server - Started @1351ms
+13:07:44.673 [qtp142099757-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+13:07:45.000 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:07:45.169 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@394c7f25{HTTP/1.1}{0.0.0.0:8080}
+13:07:45.170 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@47289387{/,null,UNAVAILABLE}
+13:07:45.171 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@4c36250e{/__admin,null,UNAVAILABLE}
+13:07:45.172 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp142099757{STOPPING,8<=8<=10,i=1,q=4} Couldn't stop Thread[qtp142099757-20,5,]
+13:07:45.173 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp142099757{STOPPING,8<=8<=10,i=0,q=4} Couldn't stop Thread[qtp142099757-21,5,]
+13:08:47.329 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+13:08:48.123 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1226ms
+13:08:48.192 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+13:08:48.205 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@47289387{/__admin,null,AVAILABLE}
+13:08:48.207 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@72b16078{/,null,AVAILABLE}
+13:08:48.250 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@3591009c{HTTP/1.1}{0.0.0.0:8080}
+13:08:48.252 [main] INFO  org.eclipse.jetty.server.Server - Started @1355ms
+13:08:48.550 [qtp662666707-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+13:08:48.882 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:08:49.050 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@3591009c{HTTP/1.1}{0.0.0.0:8080}
+13:08:49.051 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@72b16078{/,null,UNAVAILABLE}
+13:08:49.052 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@47289387{/__admin,null,UNAVAILABLE}
+13:08:49.053 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp662666707{STOPPING,8<=8<=10,i=0,q=3} Couldn't stop Thread[qtp662666707-16,5,]
+13:08:49.054 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp662666707{STOPPING,8<=8<=10,i=0,q=3} Couldn't stop Thread[qtp662666707-20,5,]
+13:12:35.773 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+13:12:36.539 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1199ms
+13:12:36.596 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+13:12:36.610 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@5990e6c5{/__admin,null,AVAILABLE}
+13:12:36.612 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@47428937{/,null,AVAILABLE}
+13:12:36.656 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@7a11c4c7{HTTP/1.1}{0.0.0.0:8080}
+13:12:36.658 [main] INFO  org.eclipse.jetty.server.Server - Started @1317ms
+13:12:36.965 [qtp1768127248-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+13:12:37.282 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:12:37.442 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@7a11c4c7{HTTP/1.1}{0.0.0.0:8080}
+13:12:37.444 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@47428937{/,null,UNAVAILABLE}
+13:12:37.444 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@5990e6c5{/__admin,null,UNAVAILABLE}
+13:12:37.446 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1768127248{STOPPING,8<=8<=10,i=1,q=4} Couldn't stop Thread[qtp1768127248-20,5,]
+13:12:37.446 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1768127248{STOPPING,8<=8<=10,i=0,q=4} Couldn't stop Thread[qtp1768127248-26,5,]
+13:14:28.272 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+13:14:29.051 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1205ms
+13:14:29.107 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+13:14:29.119 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@5471388b{/__admin,null,AVAILABLE}
+13:14:29.122 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@cf65451{/,null,AVAILABLE}
+13:14:29.166 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@75acf49e{HTTP/1.1}{0.0.0.0:8080}
+13:14:29.171 [main] INFO  org.eclipse.jetty.server.Server - Started @1324ms
+13:14:29.477 [qtp1118430673-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+13:14:29.802 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:14:29.872 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:14:29.875 [qtp1118430673-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+13:14:29.886 [qtp1118430673-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+13:14:29.895 [main] DEBUG com.intuit.karate - response time in milliseconds: 20.74
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+13:14:29.896 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 21, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+13:14:30.007 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@75acf49e{HTTP/1.1}{0.0.0.0:8080}
+13:14:30.008 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@cf65451{/,null,UNAVAILABLE}
+13:14:30.009 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@5471388b{/__admin,null,UNAVAILABLE}
+13:15:01.440 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+13:15:02.213 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1220ms
+13:15:02.281 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+13:15:02.294 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@4c36250e{/__admin,null,AVAILABLE}
+13:15:02.296 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@47289387{/,null,AVAILABLE}
+13:15:02.340 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@2c4ca0f9{HTTP/1.1}{0.0.0.0:8080}
+13:15:02.344 [main] INFO  org.eclipse.jetty.server.Server - Started @1348ms
+13:15:02.635 [qtp142099757-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+13:15:02.971 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:15:03.049 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:15:03.052 [qtp142099757-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+13:15:03.060 [main] DEBUG com.intuit.karate - response time in milliseconds: 9.40
+1 < 201
+1 < Content-Type: application/json
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:15:03.172 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@2c4ca0f9{HTTP/1.1}{0.0.0.0:8080}
+13:15:03.173 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@47289387{/,null,UNAVAILABLE}
+13:15:03.174 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@4c36250e{/__admin,null,UNAVAILABLE}
+13:15:03.175 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp142099757{STOPPING,8<=8<=10,i=0,q=1} Couldn't stop Thread[qtp142099757-17,5,]
+13:19:26.670 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+13:19:27.484 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1266ms
+13:19:27.541 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+13:19:27.555 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,AVAILABLE}
+13:19:27.557 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3b9d6699{/,null,AVAILABLE}
+13:19:27.600 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@4cc547a{HTTP/1.1}{0.0.0.0:8080}
+13:19:27.602 [main] INFO  org.eclipse.jetty.server.Server - Started @1385ms
+13:19:27.911 [qtp119112899-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+13:19:28.250 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:19:28.323 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:19:28.326 [qtp119112899-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+13:19:28.335 [main] DEBUG com.intuit.karate - response time in milliseconds: 9.08
+1 < 201
+1 < Content-Type: application/json
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:19:28.450 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@4cc547a{HTTP/1.1}{0.0.0.0:8080}
+13:19:28.451 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3b9d6699{/,null,UNAVAILABLE}
+13:19:28.452 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,UNAVAILABLE}
+13:19:28.454 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp119112899{STOPPING,8<=8<=10,i=4,q=5} Couldn't stop Thread[qtp119112899-20,5,]
+13:19:28.454 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp119112899{STOPPING,8<=8<=10,i=0,q=5} Couldn't stop Thread[qtp119112899-23,5,]
+13:36:09.636 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+13:36:10.418 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1206ms
+13:36:10.485 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+13:36:10.496 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@12cd9150{/__admin,null,AVAILABLE}
+13:36:10.498 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@22c86919{/,null,AVAILABLE}
+13:36:10.539 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@edf9445{HTTP/1.1}{0.0.0.0:8080}
+13:36:10.542 [main] INFO  org.eclipse.jetty.server.Server - Started @1329ms
+13:36:10.824 [qtp1821100643-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+13:36:11.141 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:36:11.211 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:36:11.214 [qtp1821100643-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+13:36:11.221 [main] DEBUG com.intuit.karate - response time in milliseconds: 8.61
+1 < 201
+1 < Content-Type: application/json
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:36:11.333 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@edf9445{HTTP/1.1}{0.0.0.0:8080}
+13:36:11.334 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@22c86919{/,null,UNAVAILABLE}
+13:36:11.334 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@12cd9150{/__admin,null,UNAVAILABLE}
+13:50:37.483 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+13:50:38.250 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1196ms
+13:50:38.317 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+13:50:38.329 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@12cd9150{/__admin,null,AVAILABLE}
+13:50:38.331 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@22c86919{/,null,AVAILABLE}
+13:50:38.374 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@5398edd0{HTTP/1.1}{0.0.0.0:8080}
+13:50:38.376 [main] INFO  org.eclipse.jetty.server.Server - Started @1322ms
+13:50:38.667 [qtp1821100643-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+13:50:38.995 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:50:39.062 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:50:39.065 [qtp1821100643-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+13:50:39.073 [main] DEBUG com.intuit.karate - response time in milliseconds: 8.65
+1 < 201
+1 < Content-Type: application/json
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:50:39.179 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@5398edd0{HTTP/1.1}{0.0.0.0:8080}
+13:50:39.180 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@22c86919{/,null,UNAVAILABLE}
+13:50:39.181 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@12cd9150{/__admin,null,UNAVAILABLE}
+13:50:39.182 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1821100643{STOPPING,8<=8<=10,i=2,q=4} Couldn't stop Thread[qtp1821100643-16,5,]
+13:50:39.182 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1821100643{STOPPING,8<=8<=10,i=0,q=3} Couldn't stop Thread[qtp1821100643-21,5,]
+13:52:30.436 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+13:52:31.215 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1214ms
+13:52:31.279 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+13:52:31.292 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,AVAILABLE}
+13:52:31.294 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3b9d6699{/,null,AVAILABLE}
+13:52:31.335 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@4cc547a{HTTP/1.1}{0.0.0.0:8080}
+13:52:31.341 [main] INFO  org.eclipse.jetty.server.Server - Started @1339ms
+13:52:31.626 [qtp119112899-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+13:52:31.949 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:52:32.017 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+13:52:32.020 [qtp119112899-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+13:52:32.030 [qtp119112899-20] ERROR WireMock - 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+13:52:32.040 [main] DEBUG com.intuit.karate - response time in milliseconds: 20.81
+1 < 404
+1 < Content-Type: text/plain
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+13:52:32.041 [main] ERROR com.intuit.karate - status code was: 404, expected: 201, response time: 21, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+13:52:32.154 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@4cc547a{HTTP/1.1}{0.0.0.0:8080}
+13:52:32.155 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3b9d6699{/,null,UNAVAILABLE}
+13:52:32.156 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,UNAVAILABLE}
+14:52:07.049 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+14:52:07.826 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1205ms
+14:52:07.885 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+14:52:07.896 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@21526f6c{/__admin,null,AVAILABLE}
+14:52:07.899 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@12cd9150{/,null,AVAILABLE}
+14:52:07.941 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@5795d169{HTTP/1.1}{0.0.0.0:8080}
+14:52:07.946 [main] INFO  org.eclipse.jetty.server.Server - Started @1322ms
+14:52:08.245 [qtp1114335860-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+14:52:08.584 [main] INFO  com.intuit.karate - karate.env system property was: null 
+14:52:08.648 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+14:52:08.651 [qtp1114335860-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+14:52:08.660 [main] DEBUG com.intuit.karate - response time in milliseconds: 9.47
+1 < 201
+1 < Content-Type: application/json; charset=UTF-8
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+14:52:08.769 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@5795d169{HTTP/1.1}{0.0.0.0:8080}
+14:52:08.771 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@12cd9150{/,null,UNAVAILABLE}
+14:52:08.771 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@21526f6c{/__admin,null,UNAVAILABLE}
+14:52:08.773 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1114335860{STOPPING,8<=8<=10,i=0,q=4} Couldn't stop Thread[qtp1114335860-20,5,]
+14:52:08.773 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1114335860{STOPPING,8<=8<=10,i=0,q=4} Couldn't stop Thread[qtp1114335860-23,5,]
+15:01:19.689 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+15:01:20.463 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1208ms
+15:01:20.520 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+15:01:20.533 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@47289387{/__admin,null,AVAILABLE}
+15:01:20.535 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@72b16078{/,null,AVAILABLE}
+15:01:20.580 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@3591009c{HTTP/1.1}{0.0.0.0:8080}
+15:01:20.585 [main] INFO  org.eclipse.jetty.server.Server - Started @1329ms
+15:01:20.886 [qtp662666707-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+15:01:21.210 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:01:21.377 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@3591009c{HTTP/1.1}{0.0.0.0:8080}
+15:01:21.378 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@72b16078{/,null,UNAVAILABLE}
+15:01:21.379 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@47289387{/__admin,null,UNAVAILABLE}
+15:02:19.944 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+15:02:20.701 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1183ms
+15:02:20.759 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+15:02:20.771 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@a486d78{/__admin,null,AVAILABLE}
+15:02:20.773 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@5990e6c5{/,null,AVAILABLE}
+15:02:20.814 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@5c1bd44c{HTTP/1.1}{0.0.0.0:8080}
+15:02:20.821 [main] INFO  org.eclipse.jetty.server.Server - Started @1303ms
+15:02:21.118 [qtp1327895505-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+15:02:21.435 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:02:21.501 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+15:02:21.504 [qtp1327895505-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+15:02:21.512 [main] DEBUG com.intuit.karate - response time in milliseconds: 8.98
+1 < 201
+1 < Content-Type: application/json; charset=UTF-8
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+15:02:21.621 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@5c1bd44c{HTTP/1.1}{0.0.0.0:8080}
+15:02:21.622 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@5990e6c5{/,null,UNAVAILABLE}
+15:02:21.622 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@a486d78{/__admin,null,UNAVAILABLE}
+15:05:02.880 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+15:05:03.649 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1201ms
+15:05:03.704 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+15:05:03.715 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,AVAILABLE}
+15:05:03.717 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3b9d6699{/,null,AVAILABLE}
+15:05:03.759 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@164b9c5b{HTTP/1.1}{0.0.0.0:8080}
+15:05:03.765 [main] INFO  org.eclipse.jetty.server.Server - Started @1317ms
+15:05:04.081 [qtp119112899-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+15:05:04.388 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:05:04.548 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@164b9c5b{HTTP/1.1}{0.0.0.0:8080}
+15:05:04.549 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3b9d6699{/,null,UNAVAILABLE}
+15:05:04.550 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@56e07a08{/__admin,null,UNAVAILABLE}
+15:05:04.551 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp119112899{STOPPING,8<=8<=10,i=1,q=3} Couldn't stop Thread[qtp119112899-16,5,]
+15:05:04.552 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp119112899{STOPPING,8<=8<=10,i=0,q=3} Couldn't stop Thread[qtp119112899-21,5,]
+15:06:08.229 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+15:06:09.002 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1202ms
+15:06:09.060 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+15:06:09.073 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@21526f6c{/__admin,null,AVAILABLE}
+15:06:09.075 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@12cd9150{/,null,AVAILABLE}
+15:06:09.118 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@2fe62dbe{HTTP/1.1}{0.0.0.0:8080}
+15:06:09.123 [main] INFO  org.eclipse.jetty.server.Server - Started @1322ms
+15:06:09.426 [qtp1114335860-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+15:06:09.758 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:06:09.821 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+15:06:09.824 [qtp1114335860-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+15:06:09.832 [main] DEBUG com.intuit.karate - response time in milliseconds: 9.31
+1 < 201
+1 < Content-Type: application/json; charset=UTF-8
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+15:06:09.942 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@2fe62dbe{HTTP/1.1}{0.0.0.0:8080}
+15:06:09.943 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@12cd9150{/,null,UNAVAILABLE}
+15:06:09.943 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@21526f6c{/__admin,null,UNAVAILABLE}
+15:06:09.945 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1114335860{STOPPING,8<=8<=10,i=3,q=4} Couldn't stop Thread[qtp1114335860-21,5,]
+15:06:09.945 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1114335860{STOPPING,8<=8<=10,i=0,q=4} Couldn't stop Thread[qtp1114335860-17,5,]
+15:07:03.946 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+15:07:04.699 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1181ms
+15:07:04.754 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+15:07:04.765 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@12cd9150{/__admin,null,AVAILABLE}
+15:07:04.767 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@22c86919{/,null,AVAILABLE}
+15:07:04.810 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@5398edd0{HTTP/1.1}{0.0.0.0:8080}
+15:07:04.814 [main] INFO  org.eclipse.jetty.server.Server - Started @1294ms
+15:07:05.110 [qtp1821100643-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+15:07:05.433 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:07:05.597 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@5398edd0{HTTP/1.1}{0.0.0.0:8080}
+15:07:05.598 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@22c86919{/,null,UNAVAILABLE}
+15:07:05.598 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@12cd9150{/__admin,null,UNAVAILABLE}
+15:07:05.600 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1821100643{STOPPING,8<=8<=10,i=1,q=3} Couldn't stop Thread[qtp1821100643-16,5,]
+15:07:05.600 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1821100643{STOPPING,8<=8<=10,i=0,q=3} Couldn't stop Thread[qtp1821100643-21,5,]
+15:07:27.026 [main] INFO  com.intuit.karate.RunnerOptions - found system property 'karate.options': --tags @testPOST
+15:07:27.787 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1181ms
+15:07:27.855 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.2.22.v20170606
+15:07:27.868 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@66ea1466{/__admin,null,AVAILABLE}
+15:07:27.871 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@724f138e{/,null,AVAILABLE}
+15:07:27.914 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Started NetworkTrafficServerConnector@56db847e{HTTP/1.1}{0.0.0.0:8080}
+15:07:27.917 [main] INFO  org.eclipse.jetty.server.Server - Started @1310ms
+15:07:28.202 [qtp1527254842-20] INFO  /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+15:07:28.524 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:07:28.592 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+15:07:28.595 [qtp1527254842-20] INFO  / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+15:07:28.604 [main] DEBUG com.intuit.karate - response time in milliseconds: 9.44
+1 < 201
+1 < Content-Type: application/json; charset=UTF-8
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+15:07:28.711 [main] INFO  o.e.j.s.NetworkTrafficServerConnector - Stopped NetworkTrafficServerConnector@56db847e{HTTP/1.1}{0.0.0.0:8080}
+15:07:28.712 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@724f138e{/,null,UNAVAILABLE}
+15:07:28.712 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@66ea1466{/__admin,null,UNAVAILABLE}
+15:07:28.714 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1527254842{STOPPING,8<=8<=10,i=2,q=3} Couldn't stop Thread[qtp1527254842-23,5,]
+15:07:28.714 [main] WARN  o.e.j.util.thread.QueuedThreadPool - qtp1527254842{STOPPING,8<=8<=10,i=0,q=3} Couldn't stop Thread[qtp1527254842-20,5,]

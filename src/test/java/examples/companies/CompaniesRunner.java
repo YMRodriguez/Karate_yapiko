@@ -3,7 +3,10 @@ package examples.companies;
 // first you should have added the WireMock dependencies to the pom file
 import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
 import static com.github.tomakehurst.wiremock.client.WireMock.configureFor;
+import static com.github.tomakehurst.wiremock.client.WireMock.containing;
+import static com.github.tomakehurst.wiremock.client.WireMock.equalTo;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
+import static com.github.tomakehurst.wiremock.client.WireMock.post;
 import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
 
@@ -28,9 +31,13 @@ public class CompaniesRunner {
         configureFor("localhost", 8080);
 
         stubForGetAllCompanies();
-        //stub for the test2 request
+
+        //stub for the testGET2 request
         stubForGetCompanyByCIF("B84946656", getParadigmaDigitalCompany());
         stubForGetCompanyByCIF("B82627019", getMinsaitCompany());
+
+        //stub for the testPOST request
+        stubForCreateCompany("B18996504", "Stratio", "info@stratio.com");
     }
 
     //stub method to get companies
@@ -47,7 +54,7 @@ public class CompaniesRunner {
         return "[" + getParadigmaDigitalCompany() + ", " + getMinsaitCompany() + "]";
     }
 
-    //used in the test2
+    //used in the testGET2
     private static void stubForGetCompanyByCIF(String cif, String companyByCIFResponse) {
         stubFor(get(urlEqualTo(URL + "/" + cif))
                 .willReturn(aResponse()
@@ -88,6 +95,23 @@ public class CompaniesRunner {
                 " }," +
                 " \"website\":\"https://www.minsait.com\"" +
                 "}";
+    }
+
+    //stub for the testPOST
+    private static void stubForCreateCompany(String cif, String name, String email) {
+        stubFor(post(urlEqualTo(URL))
+                .withHeader("content-type", equalTo("application/json; charset=UTF-8"))
+                .withRequestBody(containing("cif"))
+                .withRequestBody(containing("name"))
+                .withRequestBody(containing("email"))
+                .willReturn(aResponse()
+                        .withStatus(201)
+                        .withHeader("content-type", "application/json; charset=UTF-8")//important to write the charset to avoid errors
+                        .withBody(
+                                "{" + "\"cif\":\"" + cif + "\"," +
+                                        "\"name\":\"" + name + "\"," +
+                                        "\"email\":\"" + email + "\"" +
+                                        "}")));
     }
 
     @AfterClass

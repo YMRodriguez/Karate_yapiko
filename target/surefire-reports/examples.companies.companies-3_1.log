@@ -1,0 +1,51 @@
+15:07:28.524 karate.env system property was: null 
+15:07:28.592 request:
+1 > POST http://localhost:8080/companies
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 63
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:8080
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+15:07:28.604 response time in milliseconds: 9.44
+1 < 201
+1 < Content-Type: application/json; charset=UTF-8
+1 < Server: Jetty(9.2.22.v20170606)
+1 < Transfer-Encoding: chunked
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
+
+                                  =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+
+13:52:32.041 status code was: 404, expected: 201, response time: 21, url: http://localhost:8080/companies, response: 
+                                               Request was not matched
+                                               =======================
+
+-----------------------------------------------------------------------------------------------------------------------
+| Closest stub                                             | Request                                                  |
+-----------------------------------------------------------------------------------------------------------------------
+                                                           |
+POST                                                       | POST
+/companies                                                 | /companies
+                                                           |
+content-type: application/json                             | content-type: application/json; charset=UTF-8       <<<<< Header does not match
+                                                           |
+                                                           |
+-----------------------------------------------------------------------------------------------------------------------
+
+--------------------------
+

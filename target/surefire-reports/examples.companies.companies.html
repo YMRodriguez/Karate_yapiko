@@ -169,90 +169,61 @@
         <div>
             <div class="scenario">
                 <div class="scenario-heading">
-                    <span class="scenario-keyword">Scenario Outline: [2.1:46]</span><span class="scenario-name">check company name</span>
+                    <span class="scenario-keyword">Scenario Outline: [3.1:73]</span><span class="scenario-name">create new companies</span>
                 </div>
                 <div class="step-row">
                     <div class="step-cell passed">* url 'http://localhost:8080'</div>
-                    <div class="time-cell passed">0.003163</div>
+                    <div class="time-cell passed">0.002654</div>
                 </div>
-                <div class="preformatted">09:58:04.253 karate.env system property was: null</div>
+                <div class="preformatted">15:07:28.524 karate.env system property was: null</div>
                 <div class="step-row">
-                    <div class="step-cell passed">* def name = {name: 'Paradigma Digital'}</div>
-                    <div class="time-cell passed">0.000655</div>
-                </div>
-                <div class="step-row">
-                    <div class="step-cell passed">Given path 'companies', 'B84946656'</div>
-                    <div class="time-cell passed">0.008324</div>
+                    <div class="step-cell passed">Given path 'companies'</div>
+                    <div class="time-cell passed">0.002463</div>
                 </div>
                 <div class="step-row">
-                    <div class="step-cell passed">When method get</div>
-                    <div class="time-cell passed">0.035345</div>
+                    <div class="step-cell passed">* def comp =</div>
+                    <div class="time-cell passed">0.00019</div>
                 </div>
-                <div class="preformatted">09:58:04.330 request:
-1 &gt; GET http://localhost:8080/companies/B84946656
+                <div class="preformatted">{
+  "cif": 'B18996504',
+  "name": 'Stratio',
+  "email": 'info@stratio.com'
+}</div>
+                <div class="step-row">
+                    <div class="step-cell passed">When request comp</div>
+                    <div class="time-cell passed">0.000028</div>
+                </div>
+                <div class="step-row">
+                    <div class="step-cell passed">And method POST</div>
+                    <div class="time-cell passed">0.02663</div>
+                </div>
+                <div class="preformatted">15:07:28.592 request:
+1 &gt; POST http://localhost:8080/companies
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 63
+1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Host: localhost:8080
 1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/13)
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}
 
-09:58:04.347 response time in milliseconds: 13.94
-1 &lt; 200
-1 &lt; Content-Type: application/json
+15:07:28.604 response time in milliseconds: 9.44
+1 &lt; 201
+1 &lt; Content-Type: application/json; charset=UTF-8
 1 &lt; Server: Jetty(9.2.22.v20170606)
 1 &lt; Transfer-Encoding: chunked
-1 &lt; Vary: Accept-Encoding, User-Agent
-{ "cif":"B84946656", "name":"Paradigma Digital", "username":"paradigmadigital", "email":"info@paradigmadigital.com", "address":{    "street":"Atica 4, Via de las Dos Castillas",    "suite":"33",    "city":"Pozuelo de Alarcon, Madrid",    "zipcode":"28224" }, "website":"https://www.paradigmadigital.com"}</div>
+{"cif":"B18996504","name":"Stratio","email":"info@stratio.com"}</div>
                 <div class="step-row">
-                    <div class="step-cell passed">Then status 200</div>
-                    <div class="time-cell passed">0.000018</div>
+                    <div class="step-cell passed">Then status 201</div>
+                    <div class="time-cell passed">0.000019</div>
                 </div>
                 <div class="step-row">
-                    <div class="step-cell passed">And match $ contains name</div>
-                    <div class="time-cell passed">0.000744</div>
-                </div>
-            </div>
-            <div class="scenario">
-                <div class="scenario-heading">
-                    <span class="scenario-keyword">Scenario Outline: [2.2:47]</span><span class="scenario-name">check company name</span>
+                    <div class="step-cell passed">And match $ contains comp</div>
+                    <div class="time-cell passed">0.000638</div>
                 </div>
                 <div class="step-row">
-                    <div class="step-cell passed">* url 'http://localhost:8080'</div>
-                    <div class="time-cell passed">0.000115</div>
-                </div>
-                <div class="preformatted">09:58:04.360 karate.env system property was: null</div>
-                <div class="step-row">
-                    <div class="step-cell passed">* def name = {name: 'Minsait by Indra'}</div>
-                    <div class="time-cell passed">0.000111</div>
-                </div>
-                <div class="step-row">
-                    <div class="step-cell passed">Given path 'companies', 'B82627019'</div>
-                    <div class="time-cell passed">0.002762</div>
-                </div>
-                <div class="step-row">
-                    <div class="step-cell passed">When method get</div>
-                    <div class="time-cell passed">0.007237</div>
-                </div>
-                <div class="preformatted">09:58:04.366 request:
-1 &gt; GET http://localhost:8080/companies/B82627019
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: localhost:8080
-1 &gt; User-Agent: Apache-HttpClient/4.5.5 (Java/13)
-
-09:58:04.372 response time in milliseconds: 4.56
-1 &lt; 200
-1 &lt; Content-Type: application/json
-1 &lt; Server: Jetty(9.2.22.v20170606)
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Vary: Accept-Encoding, User-Agent
-{ "cif":"B82627019", "name":"Minsait by Indra", "username":"minsaitbyindra", "email":"info@minsait.com", "address":{    "street":"Av. de Bruselas",    "suite":"35",    "city":"Alcobendas, Madrid",    "zipcode":"28108" }, "website":"https://www.minsait.com"}</div>
-                <div class="step-row">
-                    <div class="step-cell passed">Then status 200</div>
-                    <div class="time-cell passed">0.000012</div>
-                </div>
-                <div class="step-row">
-                    <div class="step-cell passed">And match $ contains name</div>
-                    <div class="time-cell passed">0.00014</div>
+                    <div class="step-cell passed">And match $ contains {cif: '#notnull'}</div>
+                    <div class="time-cell passed">0.000331</div>
                 </div>
             </div>
         </div>

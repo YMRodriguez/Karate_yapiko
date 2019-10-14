@@ -76,7 +76,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19.1</version>
                 <configuration> <!--you must install this configuration to make it run-->
-                
             <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
