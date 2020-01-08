@@ -29,8 +29,8 @@ Feature: testing company mock web services
   Then status 200
   And match $ == '#[2]'
    # checks that the body of the response  has two elements, as we have stubbed for two companies 
-  And match each $ contains {name: '#notnull'}
-  And match each $ contains {email: '#notnull'}
+  And match each $ contains {name: '#notnull' }
+  And match each $ contains {email: '#notnull' }
   #checks if each element has this fields and are not null
 @testGET2
 	Scenario Outline: check company name
